@@ -7,19 +7,19 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get",
-        "post"
+        "get"
       ],
-      "route": "item/create/{password}/{name}/{id}/{recieved}/{shipped}/{returned}/{onHand}"
+      "route": "item/list"
     },
     {
       "type": "cosmosDB",
-      "direction": "out",
+      "direction": "in",
       "name": "doc",
       "databaseName": "Warehouse",
       "collectionName": "WarehouseContainer",
       "createIfNotExists": "true",
-      "connectionStringSetting": "AzureCosmosDBConnectionString"
+      "connectionStringSetting": "AzureCosmosDBConnectionString",
+      "sqlQuery": "SELECT * from c"
     },
     {
       "type": "http",
