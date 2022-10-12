@@ -49,7 +49,7 @@ def main(req: func.HttpRequest, doc: func.Out[func.Document]) -> func.HttpRespon
         newdocs.append(func.Document.from_dict(newproduct_dict))
         doc.set(newdocs)
         
-        return func.HttpResponse(f"Item successfully processed!")
+        return func.HttpResponse(f"Item successfully processed!", 200)
     else:
         return func.HttpResponse(
             "Missing parameters, please make sure you have provided the following fields: name, id, recieved, shipped, returned, onHand", 
