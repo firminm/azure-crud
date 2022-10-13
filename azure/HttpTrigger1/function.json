@@ -10,7 +10,7 @@
         "get",
         "post"
       ],
-      "route": "item/create/{password}/{name}/{id}/{recieved}/{shipped}/{returned}/{onHand}"
+      "route": "item/{*create}"
     },
     {
       "type": "cosmosDB",

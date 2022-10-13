@@ -1,0 +1,9 @@
+{
+    "password": "azure",
+    "name": "Beans",
+    "id": "12",
+    "recieved": "42",
+    "shipped": "13",
+    "returned": "1",
+    "onHand": "5"
+}
