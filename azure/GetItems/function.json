@@ -9,7 +9,7 @@
       "methods": [
         "get"
       ],
-      "route": "item/list"
+      "route": "item/list/{password}"
     },
     {
       "type": "cosmosDB",
