@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="outside">
+        <form id="survey-form" onsubmit="return doForm()">
+            <h1 id="title">Submit item to HUH</h1>
+
+            <!-- ------------------Personal Details---------------------------- -->
+            <div>
+                <label id="password-label" for="password">Password:</label>
+                <input type="text" required id="password" name="password" placeholder="Enter password">  
+            </div>
+            <fieldset>
+
+                <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+                <legend>Item Details</legend>
+                <!-- formally describes the purpose of the fieldset it is included inside. -->
+
+                <div>
+                    <label id="item-name-label" for="name">Item Name:</label>
+                    <input type="text" required id="name" name="name" placeholder="Enter Item Name">  
+                </div>
+                <div>
+                    <label id="item-id-label" for="id">ID:</label>
+                    <input type="number" id="id" name="id" placeholder="Enter Item's ID here">  
+                </div>
+                <div>
+                    <label id="recieved-label" for="recieved">Quantity Recieved:</label>
+                    <input type="number" id="recieved" name="recieved" placeholder="Enter quanitiy recieved here">  
+                </div>
+                <div>
+                    <label id="shipped-label" for="shipped">Quantity Shipped:</label>
+                    <input type="number" id="shipped" name="shipped" placeholder="Enter quanitiy shipped here">  
+                </div>
+                <div>
+                    <label id="returned-label" for="returned">Quantity Returned:</label>
+                    <input type="number" id="returned" name="returned" placeholder="Enter quanitiy returned here">  
+                </div>
+                <div>
+                    <label id="on-hand-label" for="on_hand">Quantity On Hand:</label>
+                    <input type="number" id="on_hand" name="on_hand" placeholder="Enter quanitiy on hand here">  
+                </div>
+
+                <div id="submitbutton">
+                    <button type="submit" id="submit">Send your application</button>  
+                </div>
+
+        </form>
+    </div>
+
+    <script>
+        function doForm() {
+          
+            var data = {
+                "password": document.getElementById("password").value,
+                "name": document.getElementById("name").value,
+                "id": document.getElementById("id").value,
+                "shipped": document.getElementById("shipped").value,
+                "recieved": document.getElementById("recieved").value,
+                "returned": document.getElementById("returned").value,
+                "on_hand": document.getElementById("on_hand").value
+            }
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>
